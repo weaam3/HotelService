@@ -1,0 +1,58 @@
+/* global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    color: #ff5a5f;
+}
+
+h1 {
+    margin: 0;
+    color: #333;
+}
+
+/* confirmation page styles */
+.confirmation-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.confirmation-container h2 {
+    margin-top: 0;
+}
+
+.confirmation-container p {
+    margin-bottom: 10px;
+}
+
+.confirmation-container button {
+    width: fit-content;
+    background-color: #ff5a5f;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.confirmation-container button:hover {
+    background-color: #005960;
+}

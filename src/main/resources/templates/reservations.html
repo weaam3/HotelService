@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AirBNL - Reservations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Helvetica+Neue" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/home.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/reservations.css}">
+</head>
+<body>
+<header>
+    <h1>AirBNL</h1>
+</header>
+
+<div class="reservations-container">
+    <h2>Your Reservations</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Country</th>
+            <th>Hotel Name</th>
+            <th>Room Number</th>
+            <th>Cost</th>
+            <th>Check-In Date</th>
+            <th>Check-Out Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="reservation : ${reservations}">
+            <td th:text="${countries.get(reservation.getId())}"></td>
+            <td th:text="${hotels.get(reservation.getId())}"></td>
+            <td th:text="${rooms.get(reservation.getId())}"></td>
+            <td th:text="${reservation.getCost()}"></td>
+            <td th:text="${reservation.getDateFrom()}"></td>
+            <td th:text="${reservation.getDateTo()}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <a class="back-button" href="/">Back to Home</a>
+</div>
+
+<footer>
+    <p>&copy; 2023 AirBNB</p>
+</footer>
+
+</body>
+</html>

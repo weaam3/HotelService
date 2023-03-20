@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>AirBNL - Reservation Confirmation</title>
+  <link rel="stylesheet" th:href="@{/reservation-confirmation.css}">
+</head>
+<body>
+<header>
+  <h1>AirBNL</h1>
+</header>
+
+<div class="confirmation-container">
+  <h2>Reservation Confirmation</h2>
+  <p>Your reservation for Room <span th:text="${reservation.getRoomId()}"></span> has been confirmed.</p>
+  <p>Check-in date: <span th:text="${reservation.getDateFrom()}"></span></p>
+  <p>Check-out date: <span th:text="${reservation.getDateTo()}"></span></p>
+  <p>Total cost: $<span th:text="${reservation.getCost()}"></span></p>
+  <button type="button" class="back-button" onclick="window.location.href='/'">Back to Search</button>
+</div>
+
+</body>
+</html>
